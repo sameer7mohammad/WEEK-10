@@ -1,0 +1,21 @@
+<html>
+<body>
+<form onsubmit="return validateEmail()">
+    Email:
+    <input type="text" id="email">
+    <input type="submit" value="Check">
+</form>
+<script>
+function validateEmail() {
+    let email = document.getElementById("email").value.trim();
+    let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!pattern.test(email)) {
+        alert("Enter a valid email address");
+        return false;
+    }
+    alert("Valid email address");
+    return true;
+}
+</script>
+</body>
+</html>
